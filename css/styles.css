@@ -96,6 +96,11 @@
       flex: 1;
     }
 
+    .organization__header {
+      font-size: 1.4em;
+      margin: 0.5em 0;
+    }
+
     .organization__position {
       padding-left: 1em;
       padding-right: 8em;
@@ -109,6 +114,10 @@
     .organization__position__title {
       font-weight: bold;
       font-size: 1em;
+    }
+
+    .organization__position__description {
+      margin: 0.4em 0;
     }
 
 

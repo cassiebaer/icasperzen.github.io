@@ -32,27 +32,33 @@ var contacts = [
 
 var work = new Section("work", [
   new Organization("North Carolina State University", [
-    new Position("Security Research Assistant","2011-2012","I did some research on some security stuffs and got published."),
-    new Position("FORTRAN Instructor","2008-2009","I taught le FORTRAN and won best instructor by popular vote.")
+    new Position("Security Research Assistant","2011-2012",
+      "<ul><li>extended a paper comparing security tools for journal submission (published)</li>" +
+      "<li>helped develop conference paper about automated regulatory testing (won Agile2013 Best Paper)</li></ul>"),
+    new Position("FORTRAN Instructor","2008-2009",
+      "<ul><li>taught FORTRAN95 to two classes of ca. 40 engineering students</li>" +
+      "<li>graded 4 assignments per student each week for over 200 students</li>" +
+      "<li>voted Best Instructor 2009 of 15 instructors by the student body</li></ul>")
   ], "https://www.ncsu.edu/"),
   new Organization("Transoft International, Inc.", [
-    new Position("Junior System Administrator","2005-2007","I put myself out of this job by automating everything I was supposed to be doing.")
+    new Position("Junior System Administrator","2005-2007", "")
   ], "http://www.ncr.com/"),
   new Organization("Office Max", [
-    new Position("Lead Sales Associate","2004-2007","I sold stuff to people who needed stuff.")
+    new Position("Lead Sales Associate","2004-2007","")
   ], "http://www.officedepot.com/"),
   new Organization("Other", [
-    new Position("Private Tutor", "2010-2011", "I tuted privately.")
+    new Position("Private Tutor", "2010-2011", "")
   ])
 ]);
 
 var edu = new Section("education", [
   new Organization("University of Copenhagen", [
-    new Position("M.Sc. - Computer Science (Programming Languages)","2013-2015","I studied the syntax and semantics of programming languages.")
+    new Position("M.Sc. - Computer Science (Programming Languages)","2013-2015",
+      "Thesis Topic: Differential Privacy with Dependent Types")
   ], "http://www.ku.dk/english/"),
   new Organization("North Carolina State University", [
-    new Position("B.Sc. - Nuclear Engineering","2007-2012","I studied nuclear energy."),
-    new Position("B.Sc. - Computer Science","2008-2012","I studied computer science.")
+    new Position("B.Sc. - Nuclear Engineering","2007-2012",""),
+    new Position("B.Sc. - Computer Science","2008-2012","")
   ], "https://www.ncsu.edu/")
 ]);
 
@@ -62,7 +68,10 @@ var online = new Section("online", [
   ], "https://www.udacity.com/"),
   new Organization("edX", [
     new Position("Software as a Service","2012","I learned about SAAS.")
-  ], "https://www.edx.org/")
+  ], "https://www.edx.org/"),
+  new Organization("Oak Ridge National Laboratory",[
+    new Position("Non-destructive Assay (NDA) Applications for International Safeguards","2012")
+  ], "https://www.ornl.gov/")
 ]);
 
 var extra = new Section("extra-curricular", [
@@ -79,13 +88,16 @@ var extra = new Section("extra-curricular", [
 
 var pubs = new Section("publications", [
   new Organization("ANS Student Conference 2012", [
-    new Position("Role of Secondary Electron Emission in Shaped Electrodes with Gaseous Glow Discharges","2012")
+    new Position("Role of Secondary Electron Emission in Shaped Electrodes with Gaseous Glow Discharges","2012","C. Ratzlaff, C. Holmgreen, E. Rowshanaee<br>" +
+      "American Nuclear Society Student Conference, 2012, April 12-15")
   ], "http://students.ans.org/student-conferences"),
   new Organization("Agile2013 (Nashville)", [
-    new Position("Building Regulatory-Driven Automated Test Suites","2013","Won Best Paper!")
+    new Position("Proposing Regulatory-Driven Automated Test Suites","2013","P. Morrison, C. Holmgreen, A.K. Massey, L. Williams<br>" +
+      "Agile Conference (AGILE), 2013, 11-21")
   ], "http://agile2013.agilealliance.org/"),
   new Organization("Information and Software Technology (Elsevier)", [
-    new Position("A Comparison of the Efficiency and Effectiveness of Vulnerability Discovery Techniques","2012")
+    new Position("A Comparison of the Efficiency and Effectiveness of Vulnerability Discovery Techniques","2013", "A. Austin, C. Holmgreen, L. Williams<br>" +
+      "Information and Software Technology 55 (7), 1279-1288")
   ])
 ]);
 

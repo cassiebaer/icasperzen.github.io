@@ -57,11 +57,13 @@
 
   <script type="text/template" class="tOrganization">
     <div class="organization">
-      <a href="<%= url %>">
-        <h2 class="organization__name">
-          <%= name %>
-        </h2>
-      </a>
+      <div class="organization__header">
+        <a href="<%= url %>">
+          <span class="organization__name">
+            <%= name %>
+          </span>
+        </a>
+      </div>
       <% _.each(positions, function(pos) { %>
         <%= tPosition(pos) %>
       <% }); %>
