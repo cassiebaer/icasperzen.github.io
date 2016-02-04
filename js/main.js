@@ -34,14 +34,14 @@ var work = new Section("work", [
   new Organization("North Carolina State University", [
     new Position("Security Research Assistant","2011-2012",
       "<ul><li>extended a paper comparing security tools for journal submission (published)</li>" +
-      "<li>helped develop conference paper about automated regulatory testing (won Agile2013 Best Paper)</li></ul>"),
+      "<li>worked on conference paper about automated regulatory testing (won Agile2013 Best Paper)</li></ul>"),
     new Position("FORTRAN Instructor","2008-2009",
       "<ul><li>taught FORTRAN95 to two classes of ca. 40 engineering students</li>" +
       "<li>graded 4 assignments per student each week for over 200 students</li>" +
       "<li>voted Best Instructor 2009 of 15 instructors by the student body</li></ul>")
   ], "https://www.ncsu.edu/"),
-  new Organization("Other", [
-    new Position("Private Tutor", "2010-2011", "")
+  new Organization("Private Tutoring", [
+    new Position("Science & Math Tutor", "2010-2011", "")
   ]),
   new Organization("Transoft International, Inc.", [
     new Position("Junior System Administrator","2005-2007", "")
@@ -101,12 +101,24 @@ var pubs = new Section("publications", [
   ], "http://students.ans.org/student-conferences")
 ]);
 
+var tldr = new Section("tl;dr", [
+  new Organization("Casper M. H. Holmgreen", [
+    new Position("Technical skills and interests","",
+      "frontend+backend dev, ruby, haskell, idris, simulation, privacy, data science"),
+    new Position("Other skills and interests","",
+      "music, food, the great outdoors, mindfulness, mathematics, languages")
+  ])
+]);
+
 var tContact = _.template($("script.tContact").html());
 var tPosition = _.template($("script.tPosition").html());
 var tOrganization = _.template($("script.tOrganization").html());
 var tSection = _.template($("script.tSection").html());
 
+// tutor math and sci.
+
 $(".resume")
+  .append(tSection(tldr))
   .append(tSection(work))
   .append(tSection(edu))
   .append(tSection(pubs))
