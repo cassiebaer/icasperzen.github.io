@@ -56,8 +56,12 @@
 
     .resume__cover__text {
       text-align: center;
-      padding-top: 4em;
+      padding-top: 2em;
       font-size: 2em;
+    }
+
+    .resume__cover__text p {
+      font-size: 0.75em;
     }
 
     .resume__name {
