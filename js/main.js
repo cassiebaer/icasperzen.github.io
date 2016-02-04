@@ -1,3 +1,9 @@
+function Contact(display,iconClass,url) {
+  this.display = display;
+  this.iconClass = iconClass;
+  this.url = url;
+}
+
 function Position(title,dates,desc) {
   this.title = title;
   this.dates = dates;
@@ -15,6 +21,15 @@ function Section(name,organizations) {
   this.organizations = organizations;
 }
 
+var contacts = [
+  new Contact("(919) 928-7235","fa-phone-square",""),
+  new Contact("cholmgreen@gmail.com","fa-envelope",""),
+  new Contact("icasperzen","fa-github",""),
+  new Contact("casper.holmgreen","fa-facebook-square",""),
+  new Contact("casper.holmgreen","fa-skype",""),
+  new Contact("casper.holmgreen","fa-linkedin-square")
+]
+
 var work = new Section("work", [
   new Organization("North Carolina State University", [
     new Position("Security Research Assistant","2011-2012","I did some research on some security stuffs and got published."),
@@ -25,7 +40,10 @@ var work = new Section("work", [
   ], "http://www.ncr.com/"),
   new Organization("Office Max", [
     new Position("Lead Sales Associate","2004-2007","I sold stuff to people who needed stuff.")
-  ], "http://www.officedepot.com/")
+  ], "http://www.officedepot.com/"),
+  new Organization("Other", [
+    new Position("Private Tutor", "2010-2011", "I tuted privately.")
+  ])
 ]);
 
 var edu = new Section("education", [
@@ -47,7 +65,7 @@ var online = new Section("online", [
   ], "https://www.edx.org/")
 ]);
 
-var other = new Section("other", [
+var extra = new Section("extra-curricular", [
   new Organization("Institute of Nuclear Materials Management (INMM)", [
     new Position("NCSU Chapter Communications Officer","2012")
   ], "https://www.inmm.org/"),
@@ -65,9 +83,13 @@ var pubs = new Section("publications", [
   ], "http://students.ans.org/student-conferences"),
   new Organization("Agile2013 (Nashville)", [
     new Position("Building Regulatory-Driven Automated Test Suites","2013","Won Best Paper!")
-  ], "http://agile2013.agilealliance.org/")
+  ], "http://agile2013.agilealliance.org/"),
+  new Organization("Information and Software Technology (Elsevier)", [
+    new Position("A Comparison of the Efficiency and Effectiveness of Vulnerability Discovery Techniques","2012")
+  ])
 ]);
 
+var tContact = _.template($("script.tContact").html());
 var tPosition = _.template($("script.tPosition").html());
 var tOrganization = _.template($("script.tOrganization").html());
 var tSection = _.template($("script.tSection").html());
@@ -75,6 +97,18 @@ var tSection = _.template($("script.tSection").html());
 $(".resume")
   .append(tSection(work))
   .append(tSection(edu))
-  .append(tSection(online))
-  .append(tSection(other))
-  .append(tSection(pubs));
+  .append(tSection(pubs))
+  .append(tSection(online));
+
+var div = $(".contactInfo");
+_.each(contacts,function(c) {
+  div.append(tContact(c));
+})
+
+$(window).scroll(function() {
+    if ($(this).scrollTop() > 0) {
+        $('.resume__cover').fadeOut();
+     } else {
+      $('.resume__cover').fadeIn();
+     }
+ });

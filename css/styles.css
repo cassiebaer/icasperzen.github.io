@@ -8,16 +8,20 @@
 
     }
     /* Default link styling */
-    a { color:#1199c3; text-decoration: none; }
-    a:visited { color:#0189b3; }
-    a:hover, a:focus { color:#1199c3; }
-    a:active { color:#21a9d3; }
+    a { color:#669; text-decoration: none; }
+    a:visited { color:#558; }
+    a:hover, a:focus { color:#77a; }
+    a:active { color:#88b; }
 
 
 
 /* ---------------------------------------------------------
    Author's styles
    ---------------------------------------------------------*/
+
+    .imgGithub {
+      height: 1.2em;
+    }
 
     html, body {
       height: 100%;
@@ -33,31 +37,40 @@
     .resume {
       position: relative;
       height: 100%;
-      flex: 2;
-      margin-left: 8em;
-      margin-top: 8em;
+      flex: 3;
+      margin-left: 4em;
+      margin-top: 4em;
     }
 
-/*    .resume__cover {
+    .resume__contact {
+      margin-bottom: 0.2em;
+    }
+
+    .resume__cover {
       width: 100%;
       height: 100%;
       position: absolute;
-      background: linear-gradient(to bottom, rgba(255,255,255,.75), rgba(255,255,255,1));
+      background: linear-gradient(to bottom, rgba(255,255,255,.80), rgba(255,255,255,1));
       z-index: 1;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-    }*/
+    }
+
+    .resume__cover__text {
+      text-align: center;
+      padding-top: 4em;
+      font-size: 2em;
+    }
 
     .resume__name {
       flex: 1;
       text-align: right;
-      /*background-color: tomato;*/
-
       display: flex;
       flex-direction: column;
       align-items: flex-end;
       justify-content: center;
+    }
+
+    .resume__name p {
+      margin: 0.25em 0;
     }
 
     .section {
@@ -72,7 +85,7 @@
 
     .section__label {
       width: 4em;
-      background-color: #F5F5F5;
+      background-color: #EEEEF5;
       display: flex;
       align-items: center;
       justify-content: center;
