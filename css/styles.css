@@ -1,29 +1,104 @@
 /* ---------------------------------------------------------
    HTML5 Bones
-   This stylesheet contains print styling and a section for 
-   you to simply add your own. This is a basic template 
+   This stylesheet contains print styling and a section for
+   you to simply add your own. This is a basic template
    after all.
    ---------------------------------------------------------*/
     body {
-   
+
     }
     /* Default link styling */
-    a:link { color:#0271fb; }
-    a:visited { color:#bd02fb; }
-    a:hover, a:focus { color:#000; }
-    a:active { color:#fb0e02; }
-    
-    
-    
+    a { color:#1199c3; text-decoration: none; }
+    a:visited { color:#0189b3; }
+    a:hover, a:focus { color:#1199c3; }
+    a:active { color:#21a9d3; }
+
+
+
 /* ---------------------------------------------------------
    Author's styles
    ---------------------------------------------------------*/
-    body {
-   
+
+    html, body {
+      height: 100%;
+      color: #333;
+      font-family: Arial, Helvetica, sans-serif;
+    }
+
+    .container {
+      height: 100%;
+      display: flex;
+    }
+
+    .resume {
+      position: relative;
+      height: 100%;
+      flex: 2;
+      margin-left: 8em;
+      margin-top: 8em;
+    }
+
+/*    .resume__cover {
+      width: 100%;
+      height: 100%;
+      position: absolute;
+      background: linear-gradient(to bottom, rgba(255,255,255,.75), rgba(255,255,255,1));
+      z-index: 1;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }*/
+
+    .resume__name {
+      flex: 1;
+      text-align: right;
+      /*background-color: tomato;*/
+
+      display: flex;
+      flex-direction: column;
+      align-items: flex-end;
+      justify-content: center;
+    }
+
+    .section {
+      display: flex;
+      margin-bottom: 2em;
+    }
+
+    .rotate {
+      font-size: 1.5em;
+      transform: rotate(-90deg);
+    }
+
+    .section__label {
+      width: 4em;
+      background-color: #F5F5F5;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .section__main {
+      padding-left: 2em;
+      flex: 1;
+    }
+
+    .organization__position {
+      padding-left: 1em;
+      padding-right: 8em;
+    }
+
+    .organization__position__header {
+      display: flex;
+      justify-content: space-between;
+    }
+
+    .organization__position__title {
+      font-weight: bold;
+      font-size: 1em;
     }
 
 
-    
 /* ---------------------------------------------------------
    Print styles
    ---------------------------------------------------------*/
@@ -46,14 +121,14 @@
         color:#06c;
         border:none;
     }
-    /* Don't show link destinations for JavaScript or internal links */ 
+    /* Don't show link destinations for JavaScript or internal links */
     a[href^="javascript:"]:after, a[href^="#"]:after { content:""; }
-    
+
     /* Show abbr title value in brackets after the text */
     abbr[title]:after { content: " (" attr(title) ")"; }
 
-    figure { 
-        margin-bottom:1em; 
+    figure {
+        margin-bottom:1em;
         overflow:hidden;
     }
 
